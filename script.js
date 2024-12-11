@@ -2,6 +2,17 @@ let lat = 48.3794;
 let lon = 31.1656;
 let m = 5;
 
+function showModal() {
+    const overlay = document.getElementById('modalOverlay');
+    overlay.style.display = 'flex';
+}
+
+// Функція для приховування модального вікна
+function hideModal() {
+    const overlay = document.getElementById('modalOverlay');
+    overlay.style.display = 'none';
+}
+
 document.querySelector('.menu-button').addEventListener('click', function() {
     document.querySelector('.sidebar').classList.toggle('open');
     document.body.classList.toggle('sidebar-open');

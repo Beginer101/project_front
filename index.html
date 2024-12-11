@@ -12,9 +12,17 @@
     <h2>Меню</h2>
     <h3>Закладки міст</h3>
     <button class="bookmark" onclick="searchCity('Київ')">Київ</button>
-    <button class="bookmark" onclick="searchCity('Львів')">Львів</button>
+    <button class="bookmark" onclick="searchCity('Кременчуг')">Кременчуг</button>
+    <button class="bookmark" onclick="searchCity('Немішаєве')">Немішаєве</button>
     <button class="bookmark" onclick="searchCity('Одеса')">Одеса</button>
-    <button class="bookmark" onclick="searchCity('Харків')">Харків</button>
+    <button class="bookmark" onclick="searchCity('Варшава')">Варшава</button>
+    <button class="info" onclick="showModal()">Інше</button>
+  </div>
+</div>
+<div class="overlay" id="modalOverlay">
+  <div class="modal">
+    <p>Цей проєкт був створений студентами групи ІО-25 Ковалем Костянтином і Дейкало Владиславом.</p>
+    <button onclick="hideModal()">Закрити</button>
   </div>
 </div>
 <div class="top-bar">
@@ -27,7 +35,6 @@
       <button class="search-button" onclick="searchWeather()">Пошук</button>
     </div>
   </div>
-
   <div id="result"></div>
   <div id="weather-boxes" class="weather-boxes"></div>
   <div class="button-container">
