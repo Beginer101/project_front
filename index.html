@@ -7,19 +7,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="search-box">
-  <input type="text" id="cityInput" placeholder="Введіть назву міста">
-  <button onclick="getCoordinates()">Знайти</button>
+<div class="sidebar">
+  <div class="sidebar-content">
+    <h2>Меню</h2>
+    <h3>Закладки міст</h3>
+    <button class="bookmark" onclick="searchCity('Київ')">Київ</button>
+    <button class="bookmark" onclick="searchCity('Львів')">Львів</button>
+    <button class="bookmark" onclick="searchCity('Одеса')">Одеса</button>
+    <button class="bookmark" onclick="searchCity('Харків')">Харків</button>
+  </div>
 </div>
-<div id="result"></div>
-<div id="weather-boxes" class="weather-boxes"></div>
-<div class="button-container">
-  <button id="precipitation">Опади</button>
-  <button id="temperature">Температура</button>
-  <button id="wind">Вітер</button>
+<div class="top-bar">
+  <button class="menu-button">☰</button>
 </div>
-<div class="map-box">
-  <iframe id="weatherMap" src="https://proxy-ten-sage.vercel.app/uk/weather/maps/#coords=4.8/48.3794/31.1656&map=temperature~hourly~auto~2%20m%20above%20gnd~none" width="100%" height="600px"></iframe>
+<div class="content">
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Введіть назву міста">
+      <button class="search-button" onclick="searchWeather()">Пошук</button>
+    </div>
+  </div>
+
+  <div id="result"></div>
+  <div id="weather-boxes" class="weather-boxes"></div>
+  <div class="button-container">
+    <button id="precipitation">Опади</button>
+    <button id="temperature">Температура</button>
+    <button id="wind">Вітер</button>
+  </div>
+  <div class="map-box">
+    <iframe id="weatherMap"></iframe>
+  </div>
 </div>
 <script src="script.js"></script>
 </body>
