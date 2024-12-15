@@ -103,6 +103,10 @@ function updateWeatherBoxes(weatherData) {
                 `;
 
         weatherBoxesContainer.appendChild(box);
+
+        if (index === 0){
+            setBodyBack(item.value)
+        }
     });
 }
 
@@ -119,6 +123,27 @@ function getWeatherIcon(condition) {
     };
 
     return icons[condition] || "❓";
+}
+
+function setBodyBack(condition){
+    const body = document.body;
+
+    const backgrounds = {
+        Clear: "url('./img/Clear.jpg')",
+        Clouds: "url('./img/Clouds.jpg')",
+        Rain: "url('./img/Rain.jpg')",
+        Snow: "url('./img/Snow.jpg')",
+        Thunderstorm: "url('./img/Thunderstorm.jpg')",
+        Drizzle: "url('./img/Drizzle.jpg')",
+        Mist: "url('./img/Mist.jpg')"
+    };
+
+    const background = backgrounds[condition];
+
+    body.style.backgroundImage = background;
+    body.style.backgroundSize = "cover";
+    body.style.backgroundPosition = "center";
+    body.style.backgroundRepeat = "no-repeat";
 }
 
 async function getCoordinates() {
