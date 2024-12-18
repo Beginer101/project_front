@@ -3,6 +3,110 @@ body {
     margin: 0;
     padding: 0;
     transition: margin-left 0.3s;
+    background-image: url('./img/Main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #666;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.dropdown.active {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.city-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.city-address {
+    font-size: 14px;
+    color: #666;
+}
+
+.loading {
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+.loading.active {
+    display: block;
+}
+
+.coordinates {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 14px;
+    display: none;
+}
+
+.coordinates.active {
+    display: block;
+}
+
+.coordinates-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.coordinate-item {
+    color: #666;
+    margin: 2px 0;
 }
 
 body.sidebar-open {
@@ -74,13 +178,13 @@ body.sidebar-open {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background: #007bff;
+    background: black;
     color: #fff;
     cursor: pointer;
 }
 
 .modal button:hover {
-    background: #0056b3;
+    background: black;
 }
 
 .top-bar {
@@ -100,13 +204,14 @@ body.sidebar-open {
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
-    color: #4285f4;
+    color: black;
 }
 
 .content {
     margin-top: 80px;
     padding: 20px;
-    max-width: 90%;
+    max-height: 100%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -135,7 +240,7 @@ input {
 .search-button {
     padding: 10px 20px;
     font-size: 16px;
-    background: #4285f4;
+    background: green;
     color: white;
     border: none;
     cursor: pointer;
@@ -143,7 +248,7 @@ input {
 }
 
 .search-button:hover {
-    background: #357abd;
+    background: green;
 }
 
 .sidebar {
@@ -171,6 +276,7 @@ input {
     margin-top: 20px;
     font-size: 18px;
     line-height: 1.5;
+    text-align: center;
 }
 
 .weather-boxes {
@@ -227,7 +333,7 @@ input {
 .button-container button {
     padding: 10px 20px;
     font-size: 16px;
-    background: #4285f4;
+    background: green;
     color: white;
     border: none;
     cursor: pointer;
@@ -235,7 +341,7 @@ input {
 }
 
 .button-container button:hover {
-    background: #357abd;
+    background: green;
 }
 
 .map-box {
