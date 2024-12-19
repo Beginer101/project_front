@@ -23,11 +23,6 @@ document.querySelector('.exit').addEventListener('click', function() {
     document.body.classList.toggle('sidebar-open');
 });
 
-function searchWeather() {
-    getCoordinates();
-    getWeather();
-}
-
 async function getCoordinates() {
     const city = document.getElementById('cityInput').value;
     const resultDiv = document.getElementById('result');
@@ -58,9 +53,7 @@ async function getCoordinates() {
         resultDiv.innerHTML = 'Помилка завантаження координат';
         console.error(error);
     }
-}
 
-async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c719263ca8bb1d6df089e31251468f9f&units=metric&lang=uk`;
 
     try {
@@ -77,6 +70,7 @@ async function getWeather() {
     } catch (error) {
         document.getElementById('weather-result').innerHTML = `<p>Сталася помилка при отриманні даних.</p>`;
     }
+
 }
 
 function processWeatherData(data) {
@@ -172,7 +166,7 @@ function setBodyBack(condition) {
 
 document.getElementById('cityInput').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
-        searchWeather();
+        getCoordinates();
     }
 });
 
@@ -180,7 +174,6 @@ function searchCity(cityName) {
     const cityInput = document.getElementById('cityInput');
     cityInput.value = cityName;
     getCoordinates();
-    getWeather();
 }
 
 function updateMap(mapType) {
