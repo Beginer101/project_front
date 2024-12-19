@@ -276,109 +276,58 @@ iframe {
 }
 
 @media screen and (max-width: 1024px) {
-    .map-box {
-        width: 80%;
-        margin: 20px auto;
+    .content {
         padding: 15px;
-        background: #f5f5f5;
-        border-radius: 5px;
-        border: 1px solid #ddd;
+        margin-top: 70px;
+    }
+
+    .bookmark, .info {
+        width: 90%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .weather-box {
+        flex: 1 1 calc(50% - 30px);
+        max-width: 200px;
+    }
+
+    .button-container {
+        gap: 8px;
     }
 }
 
 @media screen and (max-width: 650px) {
-
-    .sidebar {
-        width: 100%;
-        left: -100%;
-    }
-
-    .sidebar.open {
-        left: 0;
-    }
-
-    .top-bar {
+    .content {
         padding: 10px;
-        background-color: #f8f9fa;
-        position: fixed;
-        top: 0;
-        left: 0;
+        margin-top: 60px;
+    }
+
+    .bookmark, .info {
         width: 100%;
-        z-index: 100;
-        box-sizing: border-box;
+        font-size: 14px;
+        padding: 10px;
     }
 
-    .menu-button {
-        font-size: 30px;
-    }
-
-    .search-container {
-        flex-direction: column;
-        align-items: stretch;
-        margin-bottom: 20px;
-    }
-
-    .search-box {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .search-button {
-        width: 100%;
-        padding: 12px 0;
+    .modal {
+        width: 90%;
     }
 
     .weather-boxes {
-        flex-direction: column;
-        width: 100%;
+        gap: 10px;
     }
 
     .weather-box {
-        max-width: 100%;
-        margin-bottom: 15px;
+        padding: 12px;
+        font-size: 14px;
     }
 
-    .button-container {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .map-box {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: #f5f5f5;
-        border-radius: 15px;
-        border: 1px solid #ddd;
-    }
-
-    .close-menu-button {
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
+    .button-container button {
+        font-size: 14px;
         padding: 10px;
-        color: #4285f4;
-        display: none;
-        position: absolute;
-        top: 10px;
-        right: 10px;
     }
 
-    .sidebar.open .close-menu-button {
-        display: block;
-    }
-
-    .sidebar.open ~ .top-bar .menu-button {
-        display: none;
-    }
-
-    .sidebar.open .sidebar-content {
-        margin-top: 40px;
+    iframe {
+        height: 400px;
     }
 }
