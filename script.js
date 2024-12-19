@@ -18,6 +18,11 @@ document.querySelector('.menu-button').addEventListener('click', function() {
     document.body.classList.toggle('sidebar-open');
 });
 
+document.querySelector('.exit').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.toggle('open');
+    document.body.classList.toggle('sidebar-open');
+});
+
 function searchWeather() {
     getCoordinates();
     getWeather();
